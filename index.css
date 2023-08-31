@@ -1,0 +1,149 @@
+p { 
+    margin: 0;
+}
+
+body{    
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: cyan;
+    height: 100vh;
+    width: 100vw;
+}
+
+.navbarSite{
+    display: flex;
+    height: 5vh;
+    width: 100%;
+    background-color: #333;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.bandaTitlu{
+    display: flex;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.titlu{
+    font-size: 3vw;
+    color: black;
+}
+
+.cv{
+    display: flex;
+    max-width: 100vw;
+    max-height: 100vh;
+    flex-direction: row;
+}
+
+.cvStanga{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+}
+
+.cvDreapta{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+}
+
+.containerPoza{
+    display: flex;
+    width: 100%;
+    height: 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+.poza {
+    width: auto;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.containerNume {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nume {
+    font-size: 3vw;
+    color: black;
+    font-weight: bold;
+}
+
+.numeTitlu {
+    font-size: 2.7vw;
+    color: black;  
+}
+
+.titluSectiune{
+    font-size: 3vw;
+    color: black;
+}
+
+.containerSectiune{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 3vh;
+}
+
+
+.containerTitluSectiune{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.paragrafSectiune{
+    font-size: 2.5vw;
+    color: black;
+}
+
+.subparagrafSectiune{
+    font-size: 2vw;
+    color: black;
+}
+
+.containerBodySectiune{
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+}
+
+ul{
+    list-style-type: none;   
+    margin: 0;
+}
+
+.subliniat{
+    border-bottom: 0.2vw solid white;
+}
+
+.elementNavbar{
+    margin-right: 13%;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #3333;
+}
