@@ -1,0 +1,68 @@
+.containerBodyProiecte{
+    display: flex;
+    max-width: 100%;
+    max-height: 90%;
+    flex-grow: 1;
+    flex-direction: row;
+    border: 0.1vw solid white;
+    margin: 0.5vw;
+    align-items: flex-start;
+    justify-content: space-around;
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    display: block;
+}
+
+.containerProiecte{
+    display: flex;
+    width: 80%;
+    height: 97%;
+    flex-direction: row;
+    margin: 0.5vw;
+    overflow-x: auto; 
+    overflow-y: auto; 
+    scrollbar-width: none;
+}
+
+.containerPoze {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    justify-content: center; 
+}
+
+.containerPoze img {
+    max-width: 30%; 
+    flex: 1;
+    margin: 0.3vw; 
+    box-sizing: border-box; 
+    break-inside: avoid; 
+}
+
+.pozaPrincipala{
+    margin-right: 7vw;
+    width: 20%;
+    height: auto;
+}
+
+.containerButonProiecte{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+}
+
+.butonProiecte{
+    border: 0;
+    width: fit-content;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #1e1e1e;
+    cursor: pointer;
+    font-size: 7vw;
+    color: white;
+}

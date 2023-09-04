@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proiecte</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="proiecte.css">
+</head>
+<body>
+
+    <div class="navbarSite">
+        <input type="button" value="CV" onclick="schimbaPagina('http://127.0.0.1:5500/')" class="elementNavbar">
+        <input type="button" value="Proiecte" onclick="schimbaPagina('http://127.0.0.1:5500/proiecte.html')" class="elementNavbar">
+    </div>
+
+    <div class="containerBodyProiecte">
+        <div class="containerButonProiecte"><input type="button" value="<" onclick="proiectInapoi()" class="butonProiecte"></div>
+        <div class="containerProiecte"  id="containerProiecte"></div>
+        <div class="containerButonProiecte"><input type="button" value=">" onclick="proiectInainte()" class="butonProiecte"></div>
+    </div>
+
+    <script>
+        const listaProiecte = [
+            {
+                "id"        : "1",
+                "nume"      : "Notes App",
+                "descriere" : "Aplicație de notițe. Extrem de customizabilă în ceea ce privește culorile interfeței. Funcționalități ce asigură o experiență plăcută.",
+                "fs1"       : "Funcționalități de Creare, Editare, Ștergere, Arhivare a notițelor",
+                "fs2"       : "Customizare a culorilor interfeței",
+                "fs3"       : "Customizare a culorilor notițelor",
+                "fs4"       : "Adăugare poze în notițe",
+                "fs5"       : "Posibilitate de a adăuga o notiță la 'favorite'",
+                "fs6"       : "Funționalitate de filtrare a notițelor în funcție de dată, text, etc, descrescător sau crescător",
+                "fs7"       : "Backup și restore a bazei de date",                
+                "linkpoza1" : "proiecte/notesapp1.png",
+                "linkpoza2" : "proiecte/notesapp2.jpg",
+                "linkpoza3" : "proiecte/notesapp3.jpg",
+                "linkpoza4" : "proiecte/notesapp4.jpg",
+                "linkpoza5" : "proiecte/notesapp5.jpg",
+                "linkpoza6" : "proiecte/notesapp6.jpg",
+                "linkpoza7" : "proiecte/notesapp7.jpg",
+            },
+            {
+                "id"        : "2",
+                "nume"      : "Calculator",
+                "descriere" : "Aplicație pentru un calculator simplu.",
+                "fs1"       : "Toate operațiile uzuale", 
+                "linkpoza1" : "proiecte/calculator1.jpg",
+                "linkpoza2" : "proiecte/calculator2.jpg",
+                "linkpoza3" : "proiecte/calculator3.jpg",
+                "linkpoza4" : "proiecte/calculator4.jpg",
+                "linkpoza5" : "proiecte/calculator5.jpg",
+                "linkpoza6" : "proiecte/calculator6.jpg",
+                "linkpoza7" : "proiecte/calculator7.jpg",
+            },
+            {
+                "id"        : "3",
+                "nume"      : "Vremea Romania",
+                "descriere" : "Aplicație meteo, vizualizează detalii despre temperatură, umiditate, viteza vântului pt reședințele de județ a României.",
+                "fs1"       : "Apelarea API-ului <a href='https://openweathermap.org/'>Open Weather</a> pentru culegerea de date",
+                "fs2"       : "Alegerea simplă a județului prin atingere pe imaginea CSV",
+                "fs3"       : "În funcție de județul ales se afișează datele de vreme pentru ziua respectivă, date de către API-ul Open Weather",
+                "linkpoza1" : "proiecte/vremea1.png",
+                "linkpoza2" : "proiecte/vremea2.jpg",
+                "linkpoza3" : "proiecte/vremea3.jpg",
+                "linkpoza4" : "proiecte/vremea4.jpg",
+                "linkpoza5" : "proiecte/vremea5.jpg",
+                "linkpoza6" : "proiecte/vremea6.jpg",
+                "linkpoza7" : "proiecte/vremea7.jpg",
+            },
+            {
+                "id"        : "4",
+                "nume"      : "IP Calculator",
+                "descriere" : "Folosind Calculatorul IP, puteți calcula adresa de broadcast și rețea, numărul de gazde și intervalul de gazde pe baza unei adrese IP și a unei măști de subrețea date ca input.",
+                "fs1"       : "Input-ul constă dintr-o adresă IP, și un Subnet Mask - care poate fi ales sub formă de adresă sau de biți, din lise drop down",
+                "fs2"       : "Output-ul constă din afișarea numărului de host-uri, clasa adresei IP, range-ul host-urilor",
+                "fs3"       : "Se pot vedea și notațiile hexadecimale sau binare pentru input-ul decimal",
+                "linkpoza1" : "proiecte/ip1.png",
+                "linkpoza2" : "proiecte/ip2.jpg",
+                "linkpoza3" : "proiecte/ip3.jpg",
+                "linkpoza4" : "proiecte/ip4.jpg",
+                "linkpoza5" : "proiecte/ip5.jpg",
+                "linkpoza6" : "proiecte/ip6.jpg",
+                "linkpoza7" : "proiecte/ip7.jpg",
+            },
+            {
+                "id"        : "5",
+                "nume"      : "Video Downloader",
+                "descriere" : "Aplicație pentru descărcarea videoclipurilor. Descărcați videoclipuri folosind aplicația Video Downloader. Descărcați întregul videoclip sau doar secțiuni ale videoclipului folosind modulul de tăiere video. Descărcați videoclipuri de pe TikTok, Instagram, Facebook etc.",
+                "fs1"       : "Aplicația accesează API-ul meu, care constă dintr-o aplicație Python - Flask.",
+                "fs2"       : "Ca input se trimite către API un link de tiktok/yewtube/piped/vimeo/dailymotion/etc - sau doar ID-ul unui clip de YouTube, fără partea de 'https://youtu.be/' (pentru a fi acceptată de către Google Playstore)",
+                "fs3"       : "Opțional se pot trimite ca input și timpul de start și timpul de sfârșit - iar API-ul returnează doar acel segment de videoclip",
+                "fs4"       : "Videoclipurile se stochează local, în folderul aplicației. Se pot accesa din galeria aplicației",
+                "fs5"       : "Din galeria aplicației clipurile pot fi vizualizate, li se pot schimba numele, se pot șterge, sau se pot distribui pe rețelele sociale, google drive, etc",
+                "linkpoza1" : "proiecte/videodownloader1.png",
+                "linkpoza2" : "proiecte/videodownloader2.jpg",
+                "linkpoza3" : "proiecte/videodownloader3.jpg",
+                "linkpoza4" : "proiecte/videodownloader4.jpg",
+                "linkpoza5" : "proiecte/videodownloader5.jpg",
+                "linkpoza6" : "proiecte/videodownloader6.jpg",
+                "linkpoza7" : "proiecte/videodownloader7.jpg",
+            },
+        ];
+        
+        let index = 0;
+
+        function proiectInainte(){
+            index = index + 1;
+            console.log(index)
+            if(index > 4)
+                index = 0;
+            randareProiecte()
+        }
+        function proiectInapoi(){
+            index = index - 1
+            console.log(index)
+            if(index < 0)
+                index = 4
+            randareProiecte()
+        }
+
+        function randareProiecte(){
+            const containerProiecte = document.getElementById("containerProiecte");        
+            const proiect = listaProiecte[index] 
+            const divProiect = document.createElement("div");
+            divProiect.setAttribute("class", "proiect");
+            containerProiecte.innerHTML = `''`
+            divProiect.innerHTML = `
+                <div class="bandaTitlu">
+                    <img class="pozaPrincipala" src="${proiect.linkpoza1}">
+                    <div class="subliniat"><p class="nume">${proiect.nume}</p></div>
+                </div>
+                <div class="containerSectiune">
+                    <div class="containerTitluSectiune"><p class="paragrafSectiune"> ${proiect.descriere}</p></div>
+                    <div class="containerBodySectiune">
+                        <ul>
+                            <li>
+                                ${randareFunctionalitati(proiect)}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="containerPoze">
+                    <img src="${proiect.linkpoza2}">
+                    <img src="${proiect.linkpoza3}">
+                    <img src="${proiect.linkpoza4}">
+                    <img src="${proiect.linkpoza5}">
+                    <img src="${proiect.linkpoza6}"> 
+                    <img src="${proiect.linkpoza7}">     
+                </div>
+                
+            `;
+            containerProiecte.appendChild(divProiect);
+        }
+
+        function randareFunctionalitati(proiect) {
+            const listaFunctionalitati = [];
+            for(let i = 0; i < 33; i++){
+                cheieFunctionalitate  = `fs${i}`;
+                if(proiect[cheieFunctionalitate]){
+                    listaFunctionalitati.push(`<p class="paragrafSectiune">${proiect[cheieFunctionalitate]}</p>`);
+                }
+            }
+            return listaFunctionalitati.join('\n');
+        }
+
+        randareProiecte()
+
+        function schimbaPagina(pagina){
+            window.location.href=pagina
+        }
+        
+    </script>
+
+</body>
+</html>

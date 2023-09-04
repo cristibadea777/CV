@@ -9,33 +9,59 @@
 <body>
 
     <div class="navbarSite">
-        <button class="elementNavbar"><p class="titlu">CV</p></button>
-        <button class="elementNavbar"><p class="titlu">Proiecte</p></button>
+        <input type="button" value="CV" onclick="schimbaPagina('https://cristianbadea.online')" class="elementNavbar">
+        <input type="button" value="Proiecte" onclick="schimbaPagina('https://cristianbadea.online/proiecte.html')" class="elementNavbar">
     </div>
 
-    <div class="cv">
-        <div class="cvStanga">
+    <div class="containerBody">
+        <div class="bodyStanga">
             <div class="containerPoza">
-                <img src="eu.png" alt="cv-photo" class="poza">
+                <img src="eu3.jpg" alt="cv-photo" class="poza">
             </div>
             <div class="containerNume"> 
-                <div style="margin-bottom: 3%"> <p class="nume">BADEA CRISTIAN-NARCIS</p> </div>
+                <div style="margin-bottom: 3%"> <p class="nume">BADEA CRISTIAN</p> </div>
                 <div> <p class="numeTitlu">Licențiat în informatică</p> </div>
+            </div>
+            <div class="containerContact">
+                <div class="sectiuneContact">
+                    <p class="elementStangaSeciuneContact">Telefon</p>
+                    <p class="elementDreaptaSeciuneContact">0771 287 872</p>
+                </div>
+                <div class="sectiuneContact">
+                    <p class="elementStangaSeciuneContact">Email</p>
+                    <a href="mailto:eu@cristianbadea.online" class="elementDreaptaSeciuneContact">eu@cristianbadea.online</a>
+                </div>
+                <div class="sectiuneContact">
+                    <p class="elementStangaSeciuneContact">Conturi</p>
+                    <div class="sectiuneContactPoze">
+                        <div class="containerPozaContact">
+                            <a href="https://play.google.com/store/apps/dev?id=5253973682959814913" class="containerPozaContact">
+                                <img src="playstore.png" alt="playstore-photo" class="poza">
+                            </a>
+                        </div>
+                        <div class="containerPozaContact">
+                            <a href="https://github.com/cristibadea777" class="containerPozaContact">
+                                <img src="github.png" alt="github-photo" class="poza">
+                            </a>
+                        </div>
+                        <div class="containerPozaContact">
+                            <a href="https://www.linkedin.com/in/cristian-badea-b976b8220/" class="containerPozaContact">
+                                <img src="linkedin.png" alt="linkedin-photo" class="poza">
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     
-        <div class="cvDreapta">
+        <div class="bodyDreapta">
             <div class="bandaTitlu">
                 <div class="subliniat"><p class="titlu">Curriculum Vitae</p></div>
             </div>
             <div class="containerSectiune">
                 <div class="containerTitluSectiune"> <div class="subliniat"><p class="titluSectiune"> Educație și Formare</p></div> </div>
-                <div class="containerBodySectiune"">
+                <div class="containerBodySectiune">
                     <ul>
-                        <li>
-                            <p class="paragrafSectiune">Liceul de Electrotehnică și Telecomunicații</p>
-                            <ul><li><p class="subparagrafSectiune">2014 - 2017</p></li></ul>
-                        </li>
                         <li>
                             <p class="paragrafSectiune">Facultatea de Matematică și Informatică Ovidius</p>
                             <ul><li><p class="subparagrafSectiune">2017 - 2021</p></li></ul>
@@ -45,18 +71,38 @@
             </div>
             <div class="containerSectiune">
                 <div class="containerTitluSectiune"> <div class="subliniat"><p class="titluSectiune"> Experiență profesională</p></div> </div>
-                <div class="containerBodySectiune"">
+                <div class="containerBodySectiune">
                     <ul>
                         <li>
                             <p class="paragrafSectiune">Funcționar Administrativ - Polaris M Holding SRL</p>
-                            <ul><li><p class="subparagrafSectiune">7 Iulie 2022 - 15 Octombrie 2023</p></li></ul>
+                            <ul><li><p class="subparagrafSectiune">7 Iulie 2022 - 7 Octombrie 2023</p></li></ul>
                         </li>
                         
                     </ul>
                 </div>
             </div>
+            <div class="containerSectiune">
+                <div class="containerTitluSectiune"> <div class="subliniat"><p class="titluSectiune"> Competențe</p></div> </div>
+                <div class="containerBodySectiune">
+                    <ul>
+                        <li>
+                            <p class="paragrafSectiune">Am lucrat cu diverse limbaje de programare și framework-uri atât pe timpul facultății cât și după, în timpul liber, cum ar fi: C++, Java, Python, JavaScript, React, Spring Boot, Flask, React Native.</p>
+                            <p class="paragrafSectiune">Accesând secțiunea de proiecte puteți vizualiza unele dintre proiectele pe care le-am realizat.</p>
+                        </li>  
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-    
+
+    <div class="footer">
+    </div>
+
+    <script>
+        function schimbaPagina(pagina){
+            window.location.href=pagina
+        }
+    </script>
+
 </body>
 </html>
