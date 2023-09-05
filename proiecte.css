@@ -22,7 +22,6 @@
     margin: 0.5vw;
     overflow-x: auto; 
     overflow-y: auto; 
-    scrollbar-width: none;
 }
 
 .containerPoze {
@@ -30,6 +29,7 @@
     flex-wrap: wrap;
     gap: 1vw;
     justify-content: center; 
+    margin-top: 3vh;
 }
 
 .containerPoze img {
@@ -40,10 +40,18 @@
     break-inside: avoid; 
 }
 
+.containerVideo{
+    width: 70%;
+    height: 50%;
+    flex: 1;
+    margin: 0.3vw;
+}
+
 .pozaPrincipala{
     margin-right: 7vw;
     width: 20%;
     height: auto;
+    margin-top: 2vh;
 }
 
 .containerButonProiecte{
@@ -65,4 +73,18 @@
     cursor: pointer;
     font-size: 7vw;
     color: white;
+}
+
+@media (min-width: 1200px) {
+    .pozaPrincipala{
+        width: 12%;
+    }
+
+    .containerPoze img {
+        max-width: 27%;
+        flex: 1;
+        margin: 0.3vw; 
+        box-sizing: border-box; 
+        break-inside: avoid; 
+    }
 }

@@ -84,8 +84,7 @@ body{
     width: 60%;
     flex-direction: column;
     margin-top: 2%;
-    overflow: scroll;
-    scrollbar-width: none;
+    overflow-y: scroll;
 }
 
 .containerPoza{
@@ -98,8 +97,13 @@ body{
 
 .poza {
     width: auto;
-    height: 80%;
+    height: 70%;
     border-radius: 3%;
+}
+
+.pozaConturi{
+    width: auto;
+    height: 100%;
 }
 
 .containerNume {
@@ -138,6 +142,9 @@ body{
     width: 30%;
     font-size: 2vw;
     color: white;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
 }
 
 .elementDreaptaSeciuneContact{
@@ -154,18 +161,13 @@ body{
     margin-right: 2vw;
 }
 
-.pozaSectiuneContact {
-    width: auto;
-    height: 100%;
-}
 
 .sectiuneContactPoze{
     display: flex;
     flex-direction: row;
-    padding: 1vw;
-    height: 3vh;
     align-items: center;
     width: fit-content;
+    justify-content: center;
 }
 
 .titluSectiune{
@@ -227,3 +229,44 @@ ul{
     justify-content: flex-start;
     flex-direction: row; 
 }   
+
+@media (min-width: 1200px) {
+    .poza{
+        height: 100%;
+    }
+    .nume{
+        font-size: 2vw;
+    }
+    .numeTitlu{
+        font-size: 1.7vw;
+    }
+    .elementNavbar{
+        font-size: 2vw;
+    }
+    .titlu{
+        font-size: 2.3vw;
+    }
+    .titluSectiune{
+        font-size: 2vw;
+    }
+    .paragrafSectiune{
+        font-size: 1.5vw;
+    }
+    .subparagrafSectiune{
+        font-size: 1vw;
+    }
+    .containerNume{
+        margin-top: 1vh;
+    }
+    .elementStangaSeciuneContact, .elementDreaptaSeciuneContact{
+        font-size: 1.5vw;
+    }
+    .pozaConturi{
+        height: 70%;
+    }
+    
+}
+
+@media(min-width: 300px){
+        
+}
