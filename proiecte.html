@@ -16,19 +16,35 @@
     </div>
 
     <div class="containerBodyProiecte">
-        <div class="containerButonProiecte"><input type="button" value="<" onclick="proiectInapoi()" class="butonProiecte"></div>
+        <div class="containerButonProiecte">
+            <button onclick="proiectInapoi()" class="butonProiecte">
+                <i class="fa-solid fa-arrow-left fa-xs" style="color: #ffffff;"></i>
+            </button>
+        </div>
         <div class="containerProiecte"  id="containerProiecte"></div>
-        <div class="containerButonProiecte"><input type="button" value=">" onclick="proiectInainte()" class="butonProiecte"></div>
+        <div class="containerButonProiecte">
+            <button onclick="proiectInainte()" class="butonProiecte">
+                <i class="fa-solid fa-arrow-right fa-xs" style="color: #ffffff;"></i>
+            </button>
+        </div>
     </div>
 
     <dialog class="modal" id="modalPoza">
         <div class="modalDialog">
-            <button class="buton" onclick="pozaInapoi()"><</button>
+            <div class="containerButonPoze" id="containerButonPozeStanga">
+                <button class="buton" onclick="pozaInapoi()">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+            </div>
             <img class="modalImage" src="http://127.0.0.1:5500/proiecte/notesapp4.jpg" alt="Image">
             <div class="containerButonClose">
                 <button class="buton" onclick="closeModal()">X</button>
             </div>
-            <button class="buton" onclick="pozaInainte()">></button>
+            <div class="containerButonPoze">
+                <button class="buton" id="containerButonPoze" onclick="pozaInainte()">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
         </div>
     </dialog>
 
