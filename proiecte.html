@@ -146,6 +146,21 @@
                 "linkpoza7" : "",
                 "linkVideo" : "",
             },
+            {
+                "id"        : "7",
+                "nume"      : "Astronimy App",
+                "descriere" : "Aplicație de vizualizare a APOD-urilor (Astronomy Picture Of the Day) date de către NASA. Aplicația se folosește de API-ul NASA pentru a prelua imaginea/clipul, descrierea, etc pentru o anumită zi aleasă de utilizator.",
+                "fs1"       : "În funcție de data aleasă, se va afișa APOD-ul pentru ziua respectivă. Cheia API-ului permite 2000 de apelări pe oră.",
+                "fs2"       : "Funcționalitate de salvare a APOD-urilor la favorite - vor apărea în galeria aplicației",
+                "fs3"       : "Import/Export a APOD-urilor salvate",
+                "linkpoza1" : "proiecte/apod1.jpg",
+                "linkpoza2" : "proiecte/apod2.jpeg",
+                "linkpoza3" : "proiecte/apod3.jpeg",
+                "linkpoza4" : "proiecte/apod4.jpeg",
+                "linkpoza5" : "proiecte/apod5.jpeg",
+                "linkpoza6" : "proiecte/apod6.jpeg",
+                "linkpoza7" : "proiecte/apod7.jpeg",
+            },
         ];
         
         let index = 0;
@@ -153,7 +168,7 @@
         function proiectInainte(){
             index = index + 1;
             console.log(index)
-            if(index > 5)
+            if(index > 6)
                 index = 0;
             randareProiecte()
         }
@@ -161,7 +176,7 @@
             index = index - 1
             console.log(index)
             if(index < 0)
-                index = 5
+                index = 6
             randareProiecte()
         }
 
